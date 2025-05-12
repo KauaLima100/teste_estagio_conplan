@@ -1,0 +1,10 @@
+SELECT 
+    id, 
+    nome, 
+    CONCAT('R$ ', FORMAT(preco, 2, 'pt_BR')) AS preco_formatado
+FROM 
+    produtos
+WHERE 
+    preco > 50.00
+ORDER BY 
+    preco DESC;
